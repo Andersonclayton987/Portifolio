@@ -53,7 +53,7 @@ header{
     line-height: 3rem;
     margin-bottom: 2rem;
     opacity: 0;
-    animation: moveBanner 1s 0.5s forwards;
+    animation: moveBanner 1s 0.5s forwards; /*É necessário usar com as @keyframes*/
     
 }
 
@@ -84,20 +84,16 @@ header{
     text-transform: uppercase;/*Deixa maiscula*/
     background-color: rgb(58, 149, 192); /*Cor de fundo*/
     background: linear-gradient(to left, rgb(59, 93, 109), rgb(5, 143, 207)); /*Escure a cor da esquerada para a direita*/
-    padding: 1rem 2rem 1rem 2rem; /*um valor é aplicado nos quatro cantos, dois valores o primeiro valor em cima e embaixo e o segundo valor direita e esquerda, com quatro valores 
-    em sentido horario o primeiro em cima, dereita embaixo e esquerda*/
+    padding: 1rem 2rem 1rem 2rem; /*Com apenas um valor é aplicado nos quatro cantos, dois valores o primeiro valor em cima/embaixo e o segundo valor direita/esquerda, com quatro valores 
+    em sentido horario o primeiro em cima/direita/embaixo/esquerda*/
     border: none; /* sem borda*/
     border-radius: 8px;
     letter-spacing: 0.5rem; /*Dá uma espaço entre as letras*/
-    cursor: pointer; /*Identifica o elemnto como o curso*/
+    cursor: pointer; /*Identifica o elemento como cursor*/
     opacity: 0;
     animation: moveBanner 1s 0.9s forwards;
-    
-}
 }
 
 .banner button:hover{
-    opacity: 0.5;
     color: black;
 } /*Hover é uma pseuda classe que identifica uma ação*/
-
