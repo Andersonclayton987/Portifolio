@@ -1,3 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap');
 
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /*Evita a barra de rolagem*/
+    position: relative;
+}
+
+.img-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.img-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*Evita que a imagem fique distorcida */
+    opacity: 0.5;
+    animation: zoom 5s;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+    
+} /*Anima a imagem com um zoom*/
+
+.banner{
+    position: absolute;
+    top: 25%;
+    left: 5%;
+}
+
+.banner h1{
+    color: white;
+    font-size: 4rem;/*Fonte padrão dos navegadores é 16px, se usar '1rem' a fonte sera proporcional aos navegadores, a medida que o numero aumenta ela é multiplicada*/
+    font-family: "Baloo 2", serif;
+    font-weight: 200; /*Diminue o peso reduzindo o negrito*/
+    text-shadow: .3rem .4rem 2px rgb(2, 26, 36); /*Coloca uma sonbra no texto*/ 
+    line-height: 3rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: moveBanner 1s 0.5s forwards;
+    
+}
+
+@keyframes moveBanner{
+    0%{
+        transform: translateY(10rem) rotateY(-30deg);
+    }
+    100%{
+        transform: translateY(0) rotateY(0);
+        opacity: 1;
+    }
+} /*Vai animar os textos e o botão*/
+
+.banner p{
+    color: white;
+    font-family: 'Josefin Slab', serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: moveBanner 1s 0.7s forwards;
+    
+}
+
+.banner button{
+    font-family: "Mulish" serif;
+    color: white;
+    font-size: 1.1rem;
+    text-transform: uppercase;/*Deixa maiscula*/
+    background-color: rgb(58, 149, 192); /*Cor de fundo*/
+    background: linear-gradient(to left, rgb(59, 93, 109), rgb(5, 143, 207)); /*Escure a cor da esquerada para a direita*/
+    padding: 1rem 2rem 1rem 2rem; /*um valor é aplicado nos quatro cantos, dois valores o primeiro valor em cima e embaixo e o segundo valor direita e esquerda, com quatro valores 
+    em sentido horario o primeiro em cima, dereita embaixo e esquerda*/
+    border: none; /* sem borda*/
+    border-radius: 8px;
+    letter-spacing: 0.5rem; /*Dá uma espaço entre as letras*/
+    cursor: pointer; /*Identifica o elemnto como o curso*/
+    opacity: 0;
+    animation: moveBanner 1s 0.9s forwards;
+    
+}
+}
+
+.banner button:hover{
+    opacity: 0.5;
+    color: black;
+} /*Hover é uma pseuda classe que identifica uma ação*/
+
