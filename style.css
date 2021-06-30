@@ -5,6 +5,72 @@
 *{
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
+}/*Todo elemento dentro do asteristico são anulados*/
+
+:root{
+    --font-primary:"Baloo 2", serif;
+    --font-secundary:'Josefin Slab', serif;
+    --font-action:"Mulish" serif
+} /*Com esta função já é aplicada por padrão as fontes indicadas, em font-family é trocada pelo var(nome do root)*/
+
+.hamburguer{
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+.show-menu .hamburguer{
+    right: 16rem;
+}
+
+.line{
+    width: 100%;
+    background-color: white;
+    height: .1rem;
+    box-shadow: 0.1rem 0.1rem 1px black;
+    transition: transform 1s;
+}
+
+.show-menu #line1{
+    transform: rotate(45deg) translate(.5rem, .5rem);
+}
+
+.show-menu #line2{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show-menu #line3{
+    transform: rotate(-45deg) translate(.1rem, -.3rem);
+}
+
+.hamburguer span{
+    position: absolute;
+    left: 3rem;
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(7, 64, 68);
+    color: white;
+    font-family: var(--font-action);
+    opacity: 0;
+    margin-top: 12%;
+}
+
+
+
+.show-menu .hamburguer:hover span{
+    opacity: 1;
 }
 
 header{
@@ -47,14 +113,13 @@ header{
 .banner h1{
     color: white;
     font-size: 4rem;/*Fonte padrão dos navegadores é 16px, se usar '1rem' a fonte sera proporcional aos navegadores, a medida que o numero aumenta ela é multiplicada*/
-    font-family: "Baloo 2", serif;
+    font-family: var(--font-primary)
     font-weight: 200; /*Diminue o peso reduzindo o negrito*/
     text-shadow: .3rem .4rem 2px rgb(2, 26, 36); /*Coloca uma sonbra no texto*/ 
     line-height: 3rem;
     margin-bottom: 2rem;
     opacity: 0;
     animation: moveBanner 1s 0.5s forwards; /*É necessário usar com as @keyframes*/
-    
 }
 
 @keyframes moveBanner{
@@ -69,16 +134,17 @@ header{
 
 .banner p{
     color: white;
-    font-family: 'Josefin Slab', serif;
+    font-family: var(--font-secundary);
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    text-shadow: .3rem .4rem 2px rgb(2, 26, 36);
     opacity: 0;
     animation: moveBanner 1s 0.7s forwards;
     
 }
 
 .banner button{
-    font-family: "Mulish" serif;
+    font-family: var(--font-action);
     color: white;
     font-size: 1.1rem;
     text-transform: uppercase;/*Deixa maiscula*/
@@ -97,3 +163,65 @@ header{
 .banner button:hover{
     color: black;
 } /*Hover é uma pseuda classe que identifica uma ação*/
+
+.sidebar{
+    width: 20rem;
+    height: 100vh;
+    background-color:white;
+    position: fixed;
+    top: 0;
+    right: -20rem;
+    transition: 1s;
+}
+
+.show-menu .sidebar{
+    right: 0;
+}
+
+.menu{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-item{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.menu-link{
+    font-family: var(--font-action);
+    font-size: 2.5rem;
+    color: rgb(155, 153, 153);
+    transition: color 1s;
+}
+
+.menu-link:hover{
+    color: rgb(7, 64, 68);
+}
+
+.social-media{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-media i{
+    color: rgb(155, 153, 153);
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: color 1s;
+}
+
+.social-media i:hover{
+    background-color: rgb(7, 64, 68);
+}
+
