@@ -89,7 +89,7 @@ header{
 .img-wrapper img{
     width: 100%;
     height: 100%;
-    object-fit: cover; /*Evita que a imagem fique distorcida */
+    object-fit: cover; /*Evita que a imagem fique distorcida e dentro dos valores definidos */
     opacity: 0.5;
     animation: zoom 5s;
 }
@@ -149,6 +149,7 @@ header{
     font-size: 1.1rem;
     text-transform: uppercase;/*Deixa maiscula*/
     background-color: rgb(58, 149, 192); /*Cor de fundo*/
+    background: -webkit-linear-gradient(to right, rgb(59, 93, 109), rgb(5, 143, 207));
     background: linear-gradient(to left, rgb(59, 93, 109), rgb(5, 143, 207)); /*Escure a cor da esquerada para a direita*/
     padding: 1rem 2rem 1rem 2rem; /*Com apenas um valor é aplicado nos quatro cantos, dois valores o primeiro valor em cima/embaixo e o segundo valor direita/esquerda, com quatro valores 
     em sentido horario o primeiro em cima/direita/embaixo/esquerda*/
@@ -304,4 +305,90 @@ header{
 .conhecimentos-img-wrapper img{
     object-fit: cover;
     width: 100%;
+}
+
+.projetos{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    width: 20rem;
+    height: 28rem;
+    position: relative;
+    margin: 3rem;
+}
+
+.card-img-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(231, 225, 225);
+    border-radius: 1rem;
+}
+
+.card-img-wrapper img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    transition: opacity .3s;
+}
+
+.card:hover .card-img-wrapper img{
+    opacity: .5;
+}
+
+.card-info{
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    padding: 2rem;
+    text-shadow: 0 0.3rem 0.3rem rgba(0,0,0,.6);
+    transition: all 0.3s;
+}
+
+.card-info h2{
+    font-family: var(--font-secundary);
+    font-size: 2rem;
+    font-weight: 500;
+    color: rgb(6, 7, 6);
+}
+
+.card-info h3{
+    font-family: var(--font-secundary);
+    font-weight: bolder;
+    color: rgb(7, 64, 68);
+    margin-bottom: 1.2rem;
+}
+
+.card-info p{
+    font-family: var(--font-secundary);
+    color: rgb(6, 7, 6);
+    font-weight: 400;
+    width: 90%;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+}
+
+.card-info button{
+    width: 8rem;
+    height: 2.5rem;
+    background-color: rgb(58, 149, 192); /*Cor de fundo*/
+    background: -webkit-linear-gradient(to right, rgb(59, 93, 109), rgb(5, 143, 207));
+    background: linear-gradient(to left, rgb(59, 93, 109), rgb(5, 143, 207));
+    border-radius: .5rem;
+    border: none;
+    font-family: var(--font-action);
+    font-size: 1.5rem;
+    color: #eee;
+    box-shadow: 0 .1rem .8rem rgba(0,0,0,.6);
+    margin-bottom: 1rem;
+}
+
+.card:hover .card-info{
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
+
 }
