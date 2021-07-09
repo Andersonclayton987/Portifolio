@@ -49,7 +49,10 @@
             </nav>
             <div class="social-media">
                 <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/Andersonclayton987" target="blank" rel="external">
+                    <!--"target" irá abrir uma nova janela-->
+                    <i class="fab fa-github"></i>
+                </a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
         </aside>
@@ -119,8 +122,8 @@
                 </div>
                 <div class="conhecimento">
                     <div class="conhecimento-header">
-                        <i class="fab fa-github"></i>
-                        <h3>Git e GitHub</h3>
+                        <i class="fab fa-github"></i></i>
+                        <h3>Git e GitHub </h3>
                     </div>
                     <div class="conhecimento-text">
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -206,6 +209,32 @@
                     <button type="submit" class="btn-contato">Enviar</button>
                 </form>
             </div>
+        </div>
+    </section>
+
+    <section class="sessao-orcamento">
+        <div class="orcamento-wrapper">
+            <h1>Faça um orçamento</h1>
+            <form>
+                <label for="qtde">Qtde de Páginas</label>
+                <input type="number" min="1" name="qtde" id="qtde">
+                <label for="js">Preciso de um script JS</label>
+                <input type="checkbox" name="js" id="js">
+                <label>Layout</label>
+                <div class="group-layout">
+                    <div>
+                        <input type="radio" name="layout" id="layout-sim">
+                        <label for="layout-sim">Preciso de um layout</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="layout" id="layout-sim">
+                        <label for="layout-sim">Já tenho um layout</label>
+                    </div>
+                </div>
+                <label for="prazo">Prazo</label>
+                <input type="range" name="prazo" id="prazo">
+                <button class="btn-orcamento" type="submit">Enviar</button>
+            </form>
         </div>
     </section>
 
