@@ -23,7 +23,7 @@
             <div class="line" id="line3"></div>
             <span>Fechar</span>
         </div>
-        <header>
+        <header id="home">
             <div class="img-wrapper">
                 <!--wrapper serve para a imagem ficar dentro dos valores definidos-->
                 <img src="imagens/BG.jpg" alt="">
@@ -39,11 +39,11 @@
             <!--aside é o elemento que representa o menu lateral -->
             <nav>
                 <ul class="menu">
-                    <li class="menu-item"><a href="" class="menu-link">Home</a></li>
-                    <li class="menu-item"><a href="" class="menu-link">Conhecimento</a></li>
-                    <li class="menu-item"><a href="" class="menu-link">Projetos</a></li>
-                    <li class="menu-item"><a href="" class="menu-link">Contato</a></li>
-                    <li class="menu-item"><a href="" class="menu-link">Orçamento</a></li>
+                    <li class="menu-item"><a href="#home" class="menu-link">Home</a></li>
+                    <li class="menu-item"><a href="#conhecimentos" class="menu-link">Conhecimento</a></li>
+                    <li class="menu-item"><a href="#projetos" class="menu-link">Projetos</a></li>
+                    <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
+                    <li class="menu-item"><a href="#orcamento" class="menu-link">Orçamento</a></li>
 
                 </ul>
             </nav>
@@ -57,7 +57,7 @@
             </div>
         </aside>
 
-        <section class="sessao-conhecimentos">
+        <section class="sessao-conhecimentos" id="conhecimentos">
             <div class="sessao-header">
                 <h1>Conhecimentos</h1>
             </div>
@@ -138,7 +138,7 @@
             </div>
         </section>
 
-        <section class="sessao-projeto">
+        <section class="sessao-projeto" id="projetos">
             <div class="sessao-header">
                 <h1>Projetos</h1>
             </div>
@@ -188,7 +188,7 @@
 
     </div>
     </section>
-    <section class="sessao-contato">
+    <section class="sessao-contato" id="contato">
         <div class="contato-wrapper">
             <div class="contato-left"></div>
             <div class="contato-right">
@@ -212,7 +212,7 @@
         </div>
     </section>
 
-    <section class="sessao-orcamento">
+    <section class="sessao-orcamento" id="orcamento">
         <div class="orcamento-wrapper">
             <h1>Faça um orçamento</h1>
             <form>
@@ -237,6 +237,25 @@
             </form>
         </div>
     </section>
+    <footer>
+        <!--Rodapé-->
+        <div class="footer-content">
+            <p>
+                Copyright &copy; 2021, ETECIA DS - Todos os direitos reservados
+            </p>
+            <div class="social-list">
+                <ul>
+                    <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fab fa-github"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+    <a href="#home" id="link-topo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
     </div>
 

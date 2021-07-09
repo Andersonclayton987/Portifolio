@@ -15,6 +15,10 @@
     --font-action:"Mulish" serif
 } /*Com esta função já é aplicada por padrão as fontes indicadas, em font-family é trocada pelo var(nome do root)*/
 
+html{
+    scroll-behavior: smooth; /*O movimento da barra de rolagem vai ser suavizado*/
+}
+
 .hamburguer{
     width: 2rem;
     height: 2rem;
@@ -173,6 +177,7 @@ header{
     top: 0;
     right: -20rem;
     transition: 1s;
+    z-index: 50;/*Irá ficar por cima de todos os elementos*/
 }
 
 .show-menu .sidebar{
@@ -586,6 +591,52 @@ header{
     border-radius: 10px;
     border: none;
     padding: 0.3rem;
+}
 
+footer{
+    width: 100%;
+    height: 10rem;
+    background-color: rgb(24, 22, 22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.footer-content{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content p{
+    font-family: var(--font-secundary);
+    color: honeydew;
+    font-size: 1.2rem;
+}
+
+.social-list a{
+    margin: 0 2rem;
+    color: honeydew;
+    font-size: 1.3rem;
+}
+
+.social-list ul{
+    display: flex;
+}
+
+#link-topo{
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgb(58, 149, 192); /*Cor de fundo*/
+    background: -webkit-linear-gradient(to right, rgb(59, 93, 109), rgb(5, 143, 207));
+    background: linear-gradient(to left, rgb(59, 93, 109), rgb(5, 143, 207));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: honeydew;
+    border-radius: .3rem;
+    box-shadow: 0 0.1rem 0.6rem #00000099;
 }
